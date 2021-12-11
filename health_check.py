@@ -1,10 +1,23 @@
 import os
+from enum import Enum
+from typing import List
 
 import pandas as pd
 from joblib import load
 from sklearn.pipeline import Pipeline
+from pydantic import BaseModel
 
 from constants import model_path
+
+
+class StatusEnum(Enum):
+    Pass = "pass"
+    Fail = "Fail"
+
+
+class HealthCheckResponse(BaseModel):
+    status: StatusEnum
+    notes: List[str]
 
 
 def health_check():

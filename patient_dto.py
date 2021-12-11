@@ -38,7 +38,7 @@ class STSlopeEnum(Enum):
 
 
 class Patient(BaseModel):
-    age: conint(gt=0)
+    age: conint(ge=1)
     sex: SexEnum
     chestPainType: ChesPainTypeEnum
     restingBP: confloat(ge=0.0)
@@ -52,3 +52,7 @@ class Patient(BaseModel):
 
     class Config:
         use_enum_values = True
+
+
+class PredictResponse(BaseModel):
+    prob: confloat(ge=0.0, le=1.0)
