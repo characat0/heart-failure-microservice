@@ -1,4 +1,4 @@
-# Heart Failue Microservice
+# Heart Failure Microservice
 
 Microservicio en Python que predice la probabilidad de padecer una enfermedad del corazón.
 
