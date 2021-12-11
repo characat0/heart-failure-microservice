@@ -1,0 +1,6 @@
+version: "1.0"
+services:
+  heart-failure-microservice:
+    build: .
+    ports:
+      - "0.0.0.0:8080:80"
