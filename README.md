@@ -3,15 +3,16 @@
 Microservicio en Python que predice la probabilidad de padecer una enfermedad del corazón.
 
 Para poder ejecutar el microservicio de manera local utilizar:
-```
+```shell
 git clone https://github.com/MarcoVela/heart-failure-microservice.git
 cd heart-failure-microservice/
+docker-compose build
 docker-compose up
 ```
 Se podrá visualizar el servicio en el puerto 8080.
 
 ## Estructura del proyecto
-```
+```text
 │heart-failure-microservice <- Carpeta principal del proyecto.
 │
 ├── training                <- Generación y almacenamiento del modelo.
@@ -56,7 +57,7 @@ Estes' criteria]
 10. Oldpeak: oldpeak = ST [Numeric value measured in depression]
 11. ST_Slope: the slope of the peak exercise ST segment [Up: upsloping, Flat: flat, Down: downsloping]
 
-Y devuelve una predicción en formato json con el atributo "prob" indicando la probabilidad de padecer una enfermedad 
+Y devuelve una predicción en formato json con el atributo *"prob"* indicando la probabilidad de padecer una enfermedad 
 del corazón.
 
 ### GET /health
@@ -64,9 +65,9 @@ Este endpoint realiza comprobaciones de que el microservicio opere con normalida
 predicción se encuentre guardado en la ruta esperada y que sea capaz de realizar una predicción de muestra.
 
 ## Requerimientos y configuración
-Para poder desplegar el microservicio se usará Docker y docker-compose. Para modificar el modelo se deberá reemplazar 
-el archivo trainig/lgbmc.joblib, el archivo training/generate_model.py genera el modelo, para ejecutarlo se deberá 
-contar con los [datos de entrenamiento](https://www.kaggle.com/kaanboke/beginner-friendly-catboost-with-optuna/data) 
+Para poder desplegar el microservicio se usará Docker y para pruebas locales docker-compose. Para modificar el modelo 
+se deberá reemplazar el archivo trainig/lgbmc.joblib, el archivo training/generate_model.py genera el modelo, para 
+ejecutarlo se deberá contar con los [datos de entrenamiento](https://www.kaggle.com/kaanboke/beginner-friendly-catboost-with-optuna/data) 
 dentro de la carpeta /training/data/.
 
 
