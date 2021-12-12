@@ -60,6 +60,10 @@ Estes' criteria]
 Y devuelve una predicción en formato json con el atributo *"prob"* indicando la probabilidad de padecer una enfermedad 
 del corazón.
 
+<p align="center">
+  <img height="400" src="https://i.imgur.com/WMpIQUD.png" alt="Postman demo"/>
+</p>
+
 ### GET /health
 Este endpoint realiza comprobaciones de que el microservicio opere con normalidad, comprobando que el modelo de 
 predicción se encuentre guardado en la ruta esperada y que sea capaz de realizar una predicción de muestra.
