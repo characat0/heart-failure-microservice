@@ -43,19 +43,19 @@ detalles de validación de cuerpo y salida de los endpoints.
 
 ### POST /predict
 Este endpoint realiza la predicción de padecer una enfermedad del corazón, recibe en formato json los siguientes campos: 
-1. Age: age of the patient [years]
-2. Sex: sex of the patient [M: Male, F: Female]
-3. ChestPainType: chest pain type [TA: Typical Angina, ATA: Atypical Angina, NAP: NonAnginal Pain, ASY: Asymptomatic]
-4. RestingBP: resting blood pressure [mm Hg]
-5. Cholesterol: serum cholesterol [mm/dl]
-6. FastingBS: fasting blood sugar [1: if FastingBS > 120 mg/dl, 0: otherwise]
-7. RestingECG: resting electrocardiogram results [Normal: Normal, ST: having ST-T wave abnormality (T wave inversions 
+1. age: age of the patient [years]
+2. sex: sex of the patient [M: Male, F: Female]
+3. chestPainType: chest pain type [TA: Typical Angina, ATA: Atypical Angina, NAP: NonAnginal Pain, ASY: Asymptomatic]
+4. restingBP: resting blood pressure [mm Hg]
+5. cholesterol: serum cholesterol [mm/dl]
+6. fastingBS: fasting blood sugar [1: if FastingBS > 120 mg/dl, 0: otherwise]
+7. restingECG: resting electrocardiogram results [Normal: Normal, ST: having ST-T wave abnormality (T wave inversions 
 and/or ST elevation or depression of > 0.05 mV), LVH: showing probable or definite left ventricular hypertrophy by 
 Estes' criteria]
-8. MaxHR: maximum heart rate achieved [Numeric value between 60 and 202]
-9. ExerciseAngina: exercise-induced angina [Y: Yes, N: No]
-10. Oldpeak: oldpeak = ST [Numeric value measured in depression]
-11. ST_Slope: the slope of the peak exercise ST segment [Up: upsloping, Flat: flat, Down: downsloping]
+8. maxHR: maximum heart rate achieved [Numeric value between 60 and 202]
+9. exerciseAngina: exercise-induced angina [Y: Yes, N: No]
+10. oldpeak: oldpeak = ST [Numeric value measured in depression]
+11. sTSlope: the slope of the peak exercise ST segment [Up: upsloping, Flat: flat, Down: downsloping]
 
 Y devuelve una predicción en formato json con el atributo *"prob"* indicando la probabilidad de padecer una enfermedad 
 del corazón.
